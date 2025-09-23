@@ -35,9 +35,7 @@ public class chptr10 {
 		});
 	}
 
-	/**
-	 * Create the application.
-	 */
+	
 	public chptr10() {
 		initialize();
 	}
