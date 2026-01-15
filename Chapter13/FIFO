@@ -1,0 +1,36 @@
+ import java.util.LinkedList;
+import java.util.NoSuchElementException;
+import java.util.Queue;
+
+public class SimpleQueue<T> {
+    private final Queue<T> queue = new LinkedList<>();
+
+    // enqueue (add)
+    public void enqueue(T item) {
+        queue.add(item);
+    }
+
+    // dequeue (remove)
+    public T dequeue() {
+        // remove() throws NoSuchElementException if empty (good for validation)
+        return queue.remove();
+    }
+
+    public T peek() {
+        // element() throws NoSuchElementException if empty
+        return queue.element();
+    }
+
+    public boolean isEmpty() {
+        return queue.isEmpty();
+    }
+
+    public int size() {
+        return queue.size();
+    }
+
+    @Override
+    public String toString() {
+        return queue.toString();
+    }
+}

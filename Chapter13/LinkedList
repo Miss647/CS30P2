@@ -1,0 +1,39 @@
+import java.util.LinkedList;
+
+public class SimpleLinkedList<T> {
+    private final LinkedList<T> list = new LinkedList<>();
+
+    public void addFirst(T item) {
+        list.addFirst(item);
+    }
+
+    public void addLast(T item) {
+        list.addLast(item);
+    }
+
+    public T removeFirst() {
+        return list.removeFirst(); // throws NoSuchElementException if empty
+    }
+
+    public T removeLast() {
+        return list.removeLast(); // throws NoSuchElementException if empty
+    }
+
+    // remove a specific value (returns true if removed)
+    public boolean removeValue(T item) {
+        return list.remove(item);
+    }
+
+    public int size() {
+        return list.size();
+    }
+
+    public boolean isEmpty() {
+        return list.isEmpty();
+    }
+
+    @Override
+    public String toString() {
+        return list.toString();
+    }
+}
